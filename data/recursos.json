@@ -14,5 +14,13 @@
     "tema": "programación",
     "nivel": "intermedio",
     "autor_fuente": "Python Software Foundation"
-  }
+  },
+  {
+  "id": 3,
+  "tipo": "artículo",
+  "titulo": "Attention Is All You Need",
+  "tema": "inteligencia artificial",
+  "nivel": "avanzado",
+  "autor_fuente": "Vaswani et al."
+}
 ]

@@ -4,3 +4,4 @@
 - Se crea la estructura de carpetas y archivos del proyecto.
 - Se configura el entorno virtual y las dependencias iniciales.
 - Se agrega documentación base (README, alcance, criterios).
+- Se creo documentacion adicional

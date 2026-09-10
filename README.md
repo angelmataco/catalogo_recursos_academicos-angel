@@ -37,3 +37,6 @@ pip install -r requirements.txt
 - Implementar búsqueda y filtrado de recursos por tipo, tema y nivel.
 - Agregar validación automática de enlaces mediante `requests`.
 - Mejorar la salida en consola utilizando `rich`.
+
+## Tipos de recursos
+- ...

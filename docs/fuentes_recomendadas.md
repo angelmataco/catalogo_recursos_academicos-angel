@@ -5,3 +5,5 @@
 - Dialnet
 - JSTOR
 - PubMed Central (PMC)
+- Wikipedia
+- New York Times

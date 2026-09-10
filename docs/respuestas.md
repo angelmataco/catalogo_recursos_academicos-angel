@@ -1,2 +1,23 @@
 **¿Qué ventaja tiene registrar las dependencias del proyecto en requirements.txt en lugar de compartir la carpeta .venv?** R: Porque es un archivo ligero (unos KB) con solo los nombres y versiones de las librerías, mientras que .venv pesa varios GB y trae rutas del sistema que no funcionan en otra máquina; con requirements.txt cualquiera recrea el entorno con pip install -r requirements.txt.
  **¿Por qué el repositorio que tienes ahora en tu computadora no es el mismo concepto que el fork creado en GitHub?** R: El fork es la copia que queda guardada en GitHub, en la nube; el clone es la copia de esa copia pero en mi computadora, con su propio .git, donde puedo trabajar y hacer commits sin que se vea reflejado en GitHub hasta que haga push, así que son dos repos distintos conectados por el remoto origin.
+
+ 79. ¿Cómo identificaste el comando necesario cuando la práctica no lo proporcionó?
+Respuesta: Se identifica consultando la documentación oficial de Git mediante comandos en la terminal como git --help o git comando --help, leyendo las sugerencias y avisos que el propio comando git status muestra en la consola, o recurriendo a motores de búsqueda y documentación técnica.
+80. ¿Qué diferencia existe entre preparar un archivo para un commit y crear el commit?
+Respuesta: Preparar un archivo (git add) coloca sus modificaciones en el área de preparación (Staging Area), seleccionando qué cambios formarán parte de la próxima actualización. Crear el commit (git commit) guarda de forma permanente la fotografía de todos los archivos que estaban en el Staging Area dentro del historial del repositorio, asignándoles un identificador único (hash) y un mensaje explicativo.
+81. ¿Cómo puedes comprobar en qué rama estás trabajando?
+Respuesta: Puedes verificar la rama activa ejecutando el comando git branch (donde la rama actual aparece resaltada y marcada con un asterisco *) o ejecutando git status, cuya primera línea de salida especifica la rama en la que te encuentras.
+82. ¿Cómo puedes determinar qué archivos fueron modificados antes de registrarlos?
+Respuesta: Mediante el comando git status, el cual enumera todos los archivos que han sido modificados, eliminados o que aún no están rastreados (untracked) antes de agregarlos al área de preparación.
+83. ¿Cómo puedes observar exactamente qué cambió dentro de un archivo?
+Respuesta: Utilizando el comando git diff para ver las líneas exactas agregadas o eliminadas en el directorio de trabajo. Si los cambios ya fueron agregados al área de preparación con git add, se utiliza git diff --staged (o git diff --cached).
+84. ¿Por qué debe reconstruirse .venv después de obtener un repositorio?
+Respuesta: Porque el entorno virtual (.venv) contiene archivos binarios y rutas absolutas específicas del sistema operativo y directorio de la máquina donde fue creado. Dado que no se debe subir al repositorio remoto por peso e incompatibilidad, cada desarrollador debe reconstruirlo e instalar sus paquetes localmente.
+85. ¿Qué relación existe entre requirements.txt y .gitignore?
+Respuesta: .gitignore le indica a Git que ignore la carpeta pesada del entorno virtual (.venv), mientras que requirements.txt registra el listado de paquetes y versiones necesarias para el proyecto. Juntos permiten mantener el repositorio ligero al subir únicamente el archivo de texto y dar la instrucción exacta para que otros reconstruyan la carpeta .venv.
+86. ¿Por qué la colaboración se realiza desde una rama y no directamente desde main?
+Respuesta: Para mantener la rama main siempre estable, limpia y funcional. Trabajar en ramas independientes (feature branches) permite desarrollar y probar nuevas características de forma aislada, realizar revisiones de código y prevenir conflictos o errores directamente sobre la versión principal del proyecto.
+87. ¿Por qué una solicitud de cambios no requiere crear un Pull Request nuevo?
+Respuesta: Porque el Pull Request está vinculado a la rama remota de origen. Si los revisores piden realizar ajustes, únicamente debes hacer los cambios en esa misma rama en tu entorno local, hacer commit y ejecutar git push; el Pull Request abierto se actualizará automáticamente con las nuevas modificaciones.
+88. Después de realizar el merge en GitHub, ¿por qué todavía es necesario actualizar el repositorio local?
+Respuesta: Porque la fusión (merge) se ejecutó en el servidor remoto de GitHub, por lo que tu copia local desconoce esos cambios hasta que la sincronices. Debes situarte en la rama correspondiente de tu máquina local (por ejemplo, main) y ejecutar git pull para descargar e integrar la versión actualizada.

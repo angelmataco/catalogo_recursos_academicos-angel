@@ -32,3 +32,8 @@ pip install -r requirements.txt
 ## Dependencias
 - `requests` — realizar peticiones HTTP
 - `rich` — mejorar la salida en consola
+
+## Próximas mejoras
+- Implementar búsqueda y filtrado de recursos por tipo, tema y nivel.
+- Agregar validación automática de enlaces mediante `requests`.
+- Mejorar la salida en consola utilizando `rich`.

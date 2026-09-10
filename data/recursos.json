@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "tipo": "libro",
+    "titulo": "Introducción a la Inteligencia Artificial",
+    "tema": "inteligencia artificial",
+    "nivel": "básico",
+    "autor_fuente": "Stuart Russell"
+  },
+  {
+    "id": 2,
+    "tipo": "sitio web",
+    "titulo": "Python Official Documentation",
+    "tema": "programación",
+    "nivel": "intermedio",
+    "autor_fuente": "Python Software Foundation"
+  }
+]
